@@ -4,11 +4,12 @@ plugins {
 }
 
 android {
+    namespace 'com.smsbridge.app'
     compileSdk 34
 
     defaultConfig {
         applicationId "com.smsbridge.app"
-        minSdk 26          // Android 8.0+ (Galaxy S9 ships with Android 8)
+        minSdk 26
         targetSdk 34
         versionCode 1
         versionName "1.0"
@@ -33,10 +34,6 @@ android {
 dependencies {
     implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-
-    // OkHttp for WebSocket
     implementation 'com.squareup.okhttp3:okhttp:4.12.0'
-
-    // Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
 }
